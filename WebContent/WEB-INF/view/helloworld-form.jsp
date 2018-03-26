@@ -2,8 +2,8 @@
 
 <html>
 
-<form action= "../spring-mvc-demo/processForm" method= "get">
-  <input type="text" name= "name" placeholder="What's your name?">
+<form action= "processFormVersionTwo" method= "get">
+  <input type="text" name= "studentName" placeholder="What's your name?">
   <input type="submit" value="Submit Query">
 </form>
 

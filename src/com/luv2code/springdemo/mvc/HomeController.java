@@ -11,14 +11,6 @@ public class HomeController {
 		return "main-menu";
 	}
 	
-	@RequestMapping("/showForm") 
-	public String showForm(){
-		return "helloworld-form";
-	}
 	
-	@RequestMapping("/processForm") 
-	public String processForm(){
-		return "helloworld";
-	}
 
 }
