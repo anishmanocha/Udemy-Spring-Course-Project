@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
@@ -34,12 +35,31 @@ public class HelloWorldController {
 	public String letsShoutDude(HttpServletRequest request, Model model) {
 		//read request parameter from HTML form
 		String theName= request.getParameter("studentName");
-		
+	
 		System.out.println("The name is " + theName);
 		//Convert data to upper case
 		theName= theName.toUpperCase();
 		
 		String result= "Yo " + theName;
+		
+		//Append message to model
+		model.addAttribute("message", result);
+		
+		//Render front end
+		return "helloworld";
+	}
+	
+	/* This method is similar to the one above; however, instead of accepting a form parameter via
+	HTTPServletClass, we're binding using a Spring annotation*/
+	
+	@RequestMapping("/processFormVersionThree") 
+	public String processFormVersionThree(@RequestParam("studentName") String theName, Model model) {
+
+		System.out.println("The name is " + theName);
+		//Convert data to upper case
+		theName= theName.toUpperCase();
+		
+		String result= "Hey from my friend " + theName;
 		
 		//Append message to model
 		model.addAttribute("message", result);
