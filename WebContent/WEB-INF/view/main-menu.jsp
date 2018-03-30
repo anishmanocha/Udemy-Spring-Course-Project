@@ -10,6 +10,6 @@ to the Controller to render the view -->
 
 <hr>
 
-<a href="showForm">Show Form</a>
+<a href="hello/showForm">Show Form</a>
 
 </html>
