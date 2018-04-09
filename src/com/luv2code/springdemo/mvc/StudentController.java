@@ -45,6 +45,10 @@ public class StudentController {
 		
 		System.out.println("The country of the student is " + student.getCountry());
 		
+		System.out.println("The students favorite programming language is " + student.getProgrammingLanguage());
+		
+		System.out.println("The students favorite operating system is " + student.favoriteOperatingSystems);
+		
 		return "student-confirmation";
 		
 	}

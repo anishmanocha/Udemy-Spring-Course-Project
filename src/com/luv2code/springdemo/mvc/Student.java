@@ -1,6 +1,8 @@
 package com.luv2code.springdemo.mvc;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -14,7 +16,12 @@ public class Student {
 	
 	public String country;
 	
+	public String programmingLanguage;
+	
+	public String[] favoriteOperatingSystems;
+	
 	public LinkedHashMap<String, String> countryOptions;
+	
 	
 	public Student() {
 		countryOptions= new LinkedHashMap<>();
@@ -26,6 +33,8 @@ public class Student {
 		countryOptions.put("US", "United States of America");
 		
 		System.out.println("The student has been created");
+		
+		
 		
 	}
 	
@@ -60,18 +69,44 @@ public class Student {
 		
 		return this.country;
 	}
+	
+	public String getProgrammingLanguage() {
+		
+		return this.programmingLanguage;
+	}
 
+	public void setProgrammingLanguage(String programmingLanguage) {
+		
+		this.programmingLanguage=programmingLanguage;
+	}
 
 
 	public LinkedHashMap<String, String> getCountryOptions() {
 		return countryOptions;
 	}
 
-
-
 	public void setCountryOptions(LinkedHashMap<String, String> countryOptions) {
 		this.countryOptions = countryOptions;
 	}
+
+
+
+	public String[] getFavoriteOperatingSystems() {
+		return favoriteOperatingSystems;
+	}
+
+
+
+	public void setFavoriteOperatingSystems(String[] favoriteOperatingSystem) {
+		this.favoriteOperatingSystems = favoriteOperatingSystem;
+	}
+
+
+
+	
+	
+	
+	
 	
 	
 	

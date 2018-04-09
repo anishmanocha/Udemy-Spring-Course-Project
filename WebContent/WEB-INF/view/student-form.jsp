@@ -15,6 +15,21 @@
     <form:select path="country">
     		<form:options items="${student.countryOptions}"/>
     	</form:select>
+    	
+    	<br><br>
+    	
+    	
+    	JAVA <form:radiobutton path="programmingLanguage" value= "JAVA"/>
+    	C# <form:radiobutton path="programmingLanguage" value= "C#"/>
+    	PHP <form:radiobutton path="programmingLanguage" value= "PHP"/>
+    	Ruby <form:radiobutton path="programmingLanguage" value= "Ruby"/>
+    	
+    	<br><br>
+    	
+    	Windows: <form:checkbox path="favoriteOperatingSystems" value="Windows"/>
+	Mac OS: <form:checkbox path="favoriteOperatingSystems" value="MacOS"/>
+	Linux: <form:checkbox path="favoriteOperatingSystems" value="Linux"/>
+    
         
     <input type="submit" value="Submit"/>
         
