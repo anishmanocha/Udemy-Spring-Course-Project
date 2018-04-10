@@ -14,4 +14,6 @@ to the Controller to render the view -->
 
 <a href="student/showForm">Student Form</a>
 
+<a href="customer/showForm">Customer Form</a>
+
 </html>
